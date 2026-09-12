@@ -8,6 +8,9 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@200,200..900&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=VT323&display=swap" rel="stylesheet">
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
@@ -15,6 +18,12 @@
     <!-- Allows to use websocket on frontend -->
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <style>
+      *{
+        font-family: "Source Code Pro", monospace;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+      }
       .chat-window {
         min-height: 450px;
         max-height: 450px;
@@ -45,7 +54,7 @@
   <body class="flex justify-center mt-14 h-screen">
     <div class="w-full max-w-lg">
       <div class="bg-gray-600 text-white rounded-t-lg shadow-md p-6">
-        <h2 class="text-xl font-semibold mb-4">Chat Window</h2>
+        <h2 class="text-xl font-semibold mb-4">chat window</h2>
 
         <div class="flex flex-col space-y-4 chat-window"></div>
       </div>
@@ -58,6 +67,7 @@
             <i class="fas fa-comment mr-2"></i>
             <input
               type="text"
+              name="message"
               class="border border-gray-300 rounded-lg px-4 py-2 flex-grow"
               placeholder="Type your message here"
               id="message"
@@ -66,7 +76,7 @@
             <button
               class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg ml-2"
             >
-              Send
+              send
             </button>
           </div>
         </form>
