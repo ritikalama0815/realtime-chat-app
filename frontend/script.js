@@ -33,7 +33,7 @@ function render(chatHistory) {
 }
 
 function updateUsername(username) {
-  document.querySelector("h1").innerHTML = username;
+  document.querySelector("h3").innerHTML = username;
 }
 
 function messageTemplate(username, message) {
